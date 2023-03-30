@@ -15,7 +15,7 @@ WORKDIR /go/src/
 RUN go get github.com/go-delve/delve/cmd/dlv
 
 # final stage
-FROM alpine:3.11
+FROM alpine:3.14
 
 WORKDIR /
 COPY --from=build-env /debuggingTutorial/srv /
